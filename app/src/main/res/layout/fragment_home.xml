@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.activity.MainActivity">
+    tools:context=".ui.activity.mainactivity.MainActivity">
 
     <android.support.v7.widget.RecyclerView
     android:layout_width="match_parent"
@@ -14,4 +14,7 @@
     tools:itemCount="5">
     </android.support.v7.widget.RecyclerView>
 
+
+    
+    
 </LinearLayout>

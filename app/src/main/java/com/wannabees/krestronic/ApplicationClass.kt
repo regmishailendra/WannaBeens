@@ -1,6 +1,7 @@
 package com.wannabees.krestronic
 
 import android.app.Application
+import com.activeandroid.ActiveAndroid
 import com.wannabees.krestronic.dependency.DaggerRetrofitComponent
 import com.wannabees.krestronic.dependency.RetrofitComponent
 import com.wannabees.krestronic.dependency.RetrofitModule
@@ -14,7 +15,9 @@ class ApplicationClass: Application() {
 
     override fun onCreate() {
         super.onCreate()
-  retrofitComponent=DaggerRetrofitComponent.builder().retrofitModule(RetrofitModule(com.wannabees.krestronic.helpers.PLACE_BASE_URL)).build()
+        ActiveAndroid.initialize(this)
+        retrofitComponent=DaggerRetrofitComponent.builder().retrofitModule(RetrofitModule(com.wannabees.krestronic.helpers.PLACE_BASE_URL)).build()
+
     }
 
     fun  getComponent():RetrofitComponent=retrofitComponent

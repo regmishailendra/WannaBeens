@@ -3,6 +3,8 @@ package com.wannabees.krestronic.adapter
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import com.wannabees.krestronic.ui.fragment.detailsfragment.DetailsFragment
+import com.wannabees.krestronic.ui.fragment.homefragment.HomeFragment
 
 /**
  * Created by shailendra on 11/9/18.
@@ -20,8 +22,10 @@ class HomePagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
           return mFragments.size
     }
 
-    fun addFragment(fragment: Fragment, tabTitle: String) {
-        mFragments.add(fragment)
+    fun addFragment(isHome: Boolean, tabTitle: String) {
+
+       if(isHome) mFragments.add(HomeFragment()) else mFragments.add(DetailsFragment())
+
         mFragmentTitle.add(tabTitle)
     }
 

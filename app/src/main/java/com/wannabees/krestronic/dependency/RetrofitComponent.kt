@@ -1,9 +1,8 @@
 package com.wannabees.krestronic.dependency
 
-import com.wannabees.krestronic.ui.fragment.DetailsFragment
-import com.wannabees.krestronic.ui.fragment.HomeFragment
+import com.wannabees.krestronic.ui.fragment.detailsfragment.DetailsFragment
+import com.wannabees.krestronic.ui.fragment.detailsfragment.DetailsFragmentPresenter
 import dagger.Component
-import dagger.Subcomponent
 import javax.inject.Singleton
 
 /**
@@ -12,7 +11,9 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = arrayOf(RetrofitModule::class))
 interface RetrofitComponent{
-  fun inject(detailsFragment:DetailsFragment)
+  fun inject(detailsFragment: DetailsFragment)
+  fun inject(detailsFragment: DetailsFragmentPresenter) {
+  }
 
 
 }
