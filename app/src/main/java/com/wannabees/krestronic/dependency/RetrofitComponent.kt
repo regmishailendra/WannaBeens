@@ -14,6 +14,4 @@ interface RetrofitComponent{
   fun inject(detailsFragment: DetailsFragment)
   fun inject(detailsFragment: DetailsFragmentPresenter) {
   }
-
-
 }

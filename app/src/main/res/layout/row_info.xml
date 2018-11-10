@@ -25,7 +25,9 @@
         android:layout_height="45dp"
         android:id="@+id/iv"
         android:padding="6dp"
-        android:src="@drawable/ic_location"/>
+        android:src="@drawable/ic_location"
+        android:tint="#cc2b2b"
+        />
 
     <TextView
         android:layout_width="match_parent"

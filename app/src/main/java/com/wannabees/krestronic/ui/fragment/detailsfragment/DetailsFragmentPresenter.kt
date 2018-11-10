@@ -27,6 +27,8 @@ init {
             override fun onResponse(call: Call<WannaBeesDetail>?, response: Response<WannaBeesDetail>?) {
                 if (response?.isSuccessful!!){
                    populateUi(response)
+
+
                 }
                 else{
                 }
@@ -36,14 +38,14 @@ init {
     }
 
     private fun populateUi(response: Response<WannaBeesDetail>) {
-        view.populateRecyclerView(response.body(),getAdapter(response.body()))
         saveToDb(response.body())
+        view.populateRecyclerView(response.body(),getAdapter(response.body()))
         view.showCurrentStatus(response.body()?.result?.openingHours?.isOpenNow!!)
     }
 
 
     private fun saveToDb(details: WannaBeesDetail?) {
-        WannaBeesDetail.dropWannaBeDbTable()
+        //WannaBeesDetail.dropWannaBeDbTable()
         details?.saveAll()
     }
 

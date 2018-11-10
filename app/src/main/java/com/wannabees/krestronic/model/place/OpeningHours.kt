@@ -12,16 +12,11 @@ data class OpeningHours (
         @Expose @SerializedName("weekday_text") @Column(name="weekday")  var weekdayText: ArrayList<String>?): Model()
 {    constructor():this(false,null,null)
 
-
     fun saveAll(){
         for(pi:PeriodsItem in periods!!){
             pi.saveAll()
-
         }
-
         save()
-
     }
-
 
 }

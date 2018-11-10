@@ -17,8 +17,9 @@ data class WannaBeesDetail(
         @Expose @Column(name = "status") var status: String?) : Model() {
     constructor() : this(null, null)
 
+        fun getDetails(): WannaBeesDetail? = Select().from(WannaBeesDetail::class.java).executeSingle()
     companion object {
-        fun getDetails(): WannaBeesDetail = Select().from(WannaBeesDetail::class.java).executeSingle()
+
         fun dropWannaBeDbTable() {
             ActiveAndroid.execSQL(String.format("DELETE FROM %s;", "wannabedetails")) } }
 

@@ -9,7 +9,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Now"
+        android:text=""
+        android:gravity="center_horizontal"
         android:id="@+id/tv_status"
         />
 
@@ -18,5 +19,15 @@
         android:layout_height="wrap_content"
         android:id="@+id/rv_opening">
     </android.support.v7.widget.RecyclerView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/pb"
+
+        />
+
+
 
 </LinearLayout>

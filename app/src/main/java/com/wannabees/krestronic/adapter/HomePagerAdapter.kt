@@ -15,7 +15,7 @@ class HomePagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
 
     override fun getItem(position: Int): Fragment {
-         return      mFragments.get(position)
+         return mFragments.get(position)
     }
 
     override fun getCount(): Int {
@@ -23,9 +23,7 @@ class HomePagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     }
 
     fun addFragment(isHome: Boolean, tabTitle: String) {
-
        if(isHome) mFragments.add(HomeFragment()) else mFragments.add(DetailsFragment())
-
         mFragmentTitle.add(tabTitle)
     }
 
