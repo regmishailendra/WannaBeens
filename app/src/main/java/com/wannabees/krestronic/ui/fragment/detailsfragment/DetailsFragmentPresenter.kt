@@ -1,6 +1,7 @@
 package com.wannabees.krestronic.ui.fragment.detailsfragment
 
 import com.wannabees.krestronic.ApplicationClass
+import com.wannabees.krestronic.R.id.tv_status
 import com.wannabees.krestronic.adapter.DetailsRecyclerAdapter
 import com.wannabees.krestronic.model.place.WannaBeesDetail
 import com.wannabees.krestronic.server.RetrofitInterface
@@ -27,13 +28,15 @@ init {
             override fun onResponse(call: Call<WannaBeesDetail>?, response: Response<WannaBeesDetail>?) {
                 if (response?.isSuccessful!!){
                    populateUi(response)
-
-
                 }
                 else{
+                    view.setErrorMessage(response.errorBody()!!.string())
                 }
             }
             override fun onFailure(call: Call<WannaBeesDetail>?, t: Throwable?) {
+                view.setErrorMessage("Make sure you have proper internet connection "+t!!.localizedMessage)
+
+
             } })
     }
 

@@ -7,94 +7,66 @@
     android:orientation="vertical"
     tools:context=".ui.activity.mainactivity.MainActivity">
 
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:itemCount="5"
-        tools:listitem="@layout/row_info">
-    </android.support.v7.widget.RecyclerView>
+        style="@style/RecyclerViewVertical" />
 
 
     <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:id="@+id/pb"
-        />
+        style="@style/ProgressBarNormal" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
             android:id="@+id/lin_map"
-            >
+            style="@style/LinearLayoutImage">
 
             <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="18dp"
+                style="@style/ImageViewOptionsButton"
                 android:src="@drawable/maplocation" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Visit in Map" />
+               android:text="@string/visit_in_map"
+               style="@style/TextButton"
+                />
 
 
         </LinearLayout>
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:text="Visit in Map"
-            android:id="@+id/lin_call">
+            android:id="@+id/lin_call"
+            style="@style/LinearLayoutImage">
 
             <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="18dp"
+                style="@style/ImageViewOptionsButton"
                 android:src="@drawable/phonecall" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Call Us" />
+                style="@style/TextButton"
+                android:text="@string/call_us" />
 
 
         </LinearLayout>
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:id="@+id/lin_about">
+            android:id="@+id/lin_about"
+            style="@style/LinearLayoutImage">
 
             <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginTop="18dp"
+                style="@style/ImageViewOptionsButton"
                 android:src="@drawable/coding" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="About Us" />
+                style="@style/TextButton"
+                android:text="@string/about_us" />
 
 
         </LinearLayout>

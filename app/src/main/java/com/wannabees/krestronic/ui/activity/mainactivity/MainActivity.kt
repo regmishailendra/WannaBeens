@@ -2,6 +2,7 @@ package com.wannabees.krestronic.ui.activity.mainactivity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.wannabees.krestronic.R
 import com.wannabees.krestronic.adapter.HomePagerAdapter
 import com.wannabees.krestronic.listeners.DataFetchListener

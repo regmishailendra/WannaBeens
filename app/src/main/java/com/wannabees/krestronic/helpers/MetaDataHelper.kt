@@ -7,6 +7,8 @@ package com.wannabees.krestronic.helpers
  * Created by shailendra on 11/9/18.
  */
 
+/** Please see RetrofitInterface class for more details  */
+
 val PLACE_BASE_URL = "https://api.myjson.com"
 
 //val PLACE_BASE_URL = "https://maps.googleapis.com"
@@ -17,4 +19,3 @@ val PLACES_API_FIELDS = "name,formatted_address,address_components,formatted_add
 val PLACES_API_DETAIL_URL = "placeid=+$PLACES_Wannabees_ID&fields=$PLACES_API_FIELDS&key=$PLACES_API_KEY"
 
 
-//https://api.myjson.com/bins/1by8ee

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">krestronic</string>
+    <string name="visit_in_map">Visit in Map</string>
+    <string name="call_us">Call Us</string>
+    <string name="about_us">About Us</string>
+    <string name="sunday_text">Sunday</string>
+    <string name="saturday_text">Saturday</string>
+    <string name="internet_problem">Oops! Seems like you have internet connection problem.</string>
+    <string name="open_now">Open Now</string>
+    <string name="closed_now">Closed Now</string>
 </resources>

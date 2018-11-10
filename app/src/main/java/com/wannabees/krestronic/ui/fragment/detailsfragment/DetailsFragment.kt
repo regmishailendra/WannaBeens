@@ -20,7 +20,6 @@ import kotlinx.android.synthetic.main.fragment_details.*
 
 class DetailsFragment : BaseFragment(),MyInterface.DetailsFragmentView {
 
-
     lateinit var presenter:DetailsFragmentPresenter
     var listener:DataFetchListener? = null
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -51,11 +50,14 @@ class DetailsFragment : BaseFragment(),MyInterface.DetailsFragmentView {
    }
 
    override fun showCurrentStatus(status:Boolean){
-        val statusText=if(status)"Open Now" else "Closed Now"
+        val statusText=if(status)getString(R.string.open_now) else getString(R.string.closed_now)
         tv_status.setText(statusText)
     }
 
-
+    override fun setErrorMessage(message: String) {
+        tv_status.setText(message)
+        hideProgressBar()
+    }
 
 
 }

@@ -23,6 +23,8 @@ interface MyInterface{
     interface DetailsFragmentView:ProgressBar{
         fun populateRecyclerView(details: WannaBeesDetail?, adapter: DetailsRecyclerAdapter)
         fun showCurrentStatus(status:Boolean)
+        fun setErrorMessage(message:String)
+
     }
 
 

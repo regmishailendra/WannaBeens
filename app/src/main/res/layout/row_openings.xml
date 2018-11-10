@@ -19,27 +19,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#ffffff"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="8dp">
 
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Sunday"
-                android:gravity="center_horizontal"
+
                 android:id="@+id/tv_day"
+                style="@style/TextButton"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                tools:text="Sunday"
+
                 />
 
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="09:30-17:00"
-                android:gravity="center_horizontal"
                 android:id="@+id/tv_time"
-                />
+                style="@style/TextButton"
+                android:layout_weight="1"
+                tools:text="09:30-17:00" />
         </LinearLayout>
 
 

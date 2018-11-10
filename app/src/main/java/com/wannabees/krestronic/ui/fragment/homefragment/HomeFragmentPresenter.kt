@@ -23,5 +23,6 @@ class HomeFragmentPresenter(var view: HomeFragment) {
           view.initialDataSetup(companyInfoList)
          view.refreshRecyclerView()
       }
+        else{view.hideProgressBar()}
     }
 }
